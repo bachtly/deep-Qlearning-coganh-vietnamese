@@ -1,1 +1,2 @@
-# deep-Qlearning-coganh-vietnamese
+Except Coganh_env() is made by my self, most of the code is copied from https://codelearn.io/sharing/day-ai-danh-tictactoe-voi-deep-learning
+1. All of classes are reusable except Coganh_env(). When making a new game, write a different environment.
