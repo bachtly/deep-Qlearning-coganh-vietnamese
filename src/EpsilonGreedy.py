@@ -23,3 +23,23 @@ class EpsilonGreedy:
         :return: None
         """
         self.epsilon = max(self.epsilon * decay_value, lower_bound)
+
+class EpsilonZero:
+    def __init__(self, epsilon):
+        self.epsilon = epsilon
+
+    def perform(self):
+        prob = np.random.sample()  # get probability of taking random action
+        if prob <= self.epsilon:  # take random action
+            return True
+        else:  # take greedy action
+            return False
+
+    def decay(self, decay_value, lower_bound):
+        """
+        Adjust the epsilon value by the formula: epsilon = max(decayValue * epsilon, lowerBound).
+        :param decay_value: Value ratio adjustment (0, 1).
+        :param lower_bound: Minimum epsilon value.
+        :return: None
+        """
+        self.epsilon = max(self.epsilon * decay_value, lower_bound)
