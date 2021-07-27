@@ -2,7 +2,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 import pickle
 
-record = pickle.load(open('performance/record_vs_random/record_11000.pkl', 'rb'))
+record = pickle.load(open('performance/WRRG/record_11000.pkl', 'rb'))
 
 won = [record[rec]['won']/10 for rec in record.keys()]
 tie = [record[rec]['tie']/10 for rec in record.keys()]

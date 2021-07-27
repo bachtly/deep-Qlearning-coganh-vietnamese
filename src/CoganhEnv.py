@@ -195,7 +195,8 @@ class CoganhvsHuman_v0:
 
     def env_act(self):
         self.mnm_env.show_board(self.mnm_env.board)
-        self.trap_move = self.mnm_env.player_move(self.mnm_env.board, \
+        input_board = [list(i) for i in np.array(self.board).reshape((5,5))]
+        self.trap_move = self.mnm_env.player_move(input_board, \
                                                 self.current_turn, self.trap_move)
         self.board = [i for lst in self.mnm_env.board for i in lst]
         reward, done = self.check_win()
@@ -208,7 +209,8 @@ class CoganhvsHuman_v0:
         if not self.is_valid(action):
             raise Exception('Invalid action')
 
-        self.trap_move = self.mnm_env.move_piece(self.mnm_env.board, \
+        input_board = [list(i) for i in np.array(self.board).reshape((5,5))]
+        self.trap_move = self.mnm_env.move_piece(input_board, \
                                                 self.current_turn, old, new)
         self.board = [i for lst in self.mnm_env.board for i in lst]
         reward, done = self.check_win()

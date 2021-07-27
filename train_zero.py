@@ -39,6 +39,7 @@ if __name__ == "__main__":
     count = 0
 
     ### Training process
+    print("Linku starto")
     total_time = 0
     for ep in range(11000):
         start = time()
@@ -81,7 +82,7 @@ if __name__ == "__main__":
             plt.title('Checkpoint: ' + str(ep))
             plt.xlabel('Training steps')
             plt.ylabel('Reward')
-            plt.savefig('performance/reward_' + str(ep) + '.png')
+            plt.savefig('performance/mse_reward/reward_' + str(ep) + '.png')
             plt.close()
 
             loss = [(sum(loss)/len(loss))for loss in loss_records if loss != None]
@@ -89,8 +90,8 @@ if __name__ == "__main__":
             plt.title('Checkpoint: ' + str(ep))
             plt.xlabel('Training steps')
             plt.ylabel('MSE')
-            plt.savefig('performance/mse_' + str(ep) + '.png')
+            plt.savefig('performance/mse_reward/mse_' + str(ep) + '.png')
             plt.close()
         
-            pickle.dump(loss_records, open('performance/mse_'+str(ep)+'.pkl', 'wb'))
-            pickle.dump(reward_records, open('performance/reward_'+str(ep)+'.pkl', 'wb'))
+            pickle.dump(loss_records, open('performance/mse_reward/mse_'+str(ep)+'.pkl', 'wb'))
+            pickle.dump(reward_records, open('performance/mse_reward/reward_'+str(ep)+'.pkl', 'wb'))

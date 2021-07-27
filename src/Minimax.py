@@ -755,8 +755,6 @@ class Minimax:
             The board you want to display
         """
 
-        if board == None:
-            raise('Board == None')
         for i in range(5):
             if i == 0:
                 print('x\\y|', end='')
