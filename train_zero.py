@@ -1,7 +1,7 @@
 from tensorflow.keras import losses, optimizers
 from tensorflow.keras.layers import Dense
-from matplotlib import pyplot as plt
 from src.CoganhEnv import CoganhZero_v0
+from matplotlib import pyplot as plt
 from src.DQN import DQNZero
 from time import time
 import numpy as np

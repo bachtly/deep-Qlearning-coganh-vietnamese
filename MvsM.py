@@ -20,4 +20,12 @@ with tf.device('/cpu:0'):
             state, reward, done, _ = env_test.step()
             if done: break
 
+        if reward > 0:
+            print("Minimax", depth1, "WON!")
+        elif reward < 0:
+            print("Minimax", depth2, "WON!")
+        else:
+            print("Game tie!")
+        print(reward)
+
         print('Logu outo')
