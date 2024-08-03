@@ -1,11 +1,16 @@
-# Quick Start
-## Setup
-### Clone the github project
+# Introduction
+This assignment is motivated by Alpha Zero, an artificial intelligence computer program with superhuman level of play in Chess, Shogi and Go. In this assignment, our main purpose is using deep Q-learning, a reinforcement learning algorithm, to build a model for Coganh - a Vietnamese Chess. There is no such model for Coganh built before, so we introduce our own way to train as well as evaluate the model. Although there are some aspects need to be improved and require further experiments, we can conclude that the outcome model, based on our measurement, is acceptable at the moment.
+
+The benchmark of two experimented methods:
+![image](https://github.com/user-attachments/assets/50993449-1603-4b1d-9461-aa3e2b77c3b0)
+
+# Setup
+## Clone the github project
 ```
 git clone https://github.com/edwardly1002/deep-Qlearning-coganh-vietnamese
 cd deep-Qlearning-coganh-vietnamese
 ```
-### Install Tensorflow 2.5.0
+## Install Tensorflow 2.5.0
 ```
 pip install tensorflow
 ```
@@ -15,8 +20,8 @@ pip install tensorflow-gpu
 ```
 A checkpoint of our trained model is located at [Google Drive](https://drive.google.com/file/d/1Pjd-TRsRWeNlf3BPV9S8B9PQMBEe13oL/view?usp=sharing). Download it and put it in the folder named `cp`.
 
-## Usage of Functions
-### Play with AI player
+# Usage of Functions
+## Play with AI player
 You can play against the AI player by execute:
 ```
 python vshuman.py
@@ -27,7 +32,7 @@ You can observe the games between AI player vs AI player (`AIvsAI.py`), Minimax 
 ```
 python AIvsAI.py
 ```
-## Train a model
+# Train a model
 Train the model by running `train_zero.py`
 ```
 python train_zero.py
